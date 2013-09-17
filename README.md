@@ -13,14 +13,15 @@ These themes can be used in one of a few ways:
 * Copy and paste the code into your console before plotting
 * Copy and paste the code into your `.Rprofile`, and it'll always be available (after restarting R)
 
+Please note that the example plots can easily be made to look better (e.g. by chainging aspect ratios, adding labels, etc.), but I've kept them minimal to highlight where the theme comes into play.
+
 ### `theme_bdc_classic`
 
 This theme creates "classic" looking plots with basic black axis lines. While it can be used with faceted graphs, it's probably best suited for single plots.
 
 
 ```r
-ggplot(cars, aes(x = speed, y = dist)) + geom_point(pch = 1) + xlab("Speed") + 
-    ylab("Distance") + theme_bdc_classic()
+ggplot(cars, aes(x = speed, y = dist)) + geom_point(pch = 1) + theme_bdc_classic()
 ```
 
 ![plot of chunk classic_theme](figure/classic_theme.png) 
@@ -42,8 +43,7 @@ Ok, now let's plot the tip as a fraction of the total bill. We'll divide the dat
 
 ```r
 ggplot(tips, aes(x = total_bill, y = tip/total_bill)) + geom_point(pch = 1) + 
-    facet_grid(. ~ sex) + xlab("Total Bill") + ylab("Tip (Percentage of Total Bill)") + 
-    theme_bdc_facets()
+    facet_grid(. ~ sex) + theme_bdc_facets()
 ```
 
 ![plot of chunk facets_theme](figure/facets_theme.png) 
@@ -54,8 +54,7 @@ Are men better tippers than Women on Thursdays?
 
 ```r
 ggplot(tips, aes(x = total_bill, y = tip/total_bill, color = sex)) + geom_point(pch = 1) + 
-    facet_grid(. ~ day) + xlab("Total Bill") + ylab("Tip (Percentage of Total Bill)") + 
-    theme_bdc_facets()
+    facet_grid(. ~ day) + theme_bdc_facets()
 ```
 
 ![plot of chunk facets_theme_2](figure/facets_theme_2.png) 
