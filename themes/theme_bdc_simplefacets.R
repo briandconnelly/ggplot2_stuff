@@ -1,4 +1,4 @@
-theme_bdc_facets <- function (base_size=12, base_family="") 
+theme_bdc_simplefacets <- function (base_size=12, base_family="") 
 {
     theme(line = element_line(colour="black", size=0.5, linetype=1, lineend = "butt"),
           rect = element_rect(fill="white", colour="black", size=0.5, linetype=1),
@@ -31,13 +31,13 @@ theme_bdc_facets <- function (base_size=12, base_family="")
           legend.box = NULL,
           
           panel.background = element_rect(fill="white", colour=NA),
-          panel.border = element_rect(fill="transparent", colour="grey80"),
+          panel.border = element_rect(fill="transparent", colour="black"),
           panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(), 
           panel.margin = unit(0.5, "lines"),
           
-          strip.background = element_rect(fill="grey80", colour="grey80"),
-          strip.text = element_text(size=rel(0.8)),
+          strip.background = element_rect(fill=NA, colour=NA),
+          strip.text = element_text(size=rel(0.8), color="black", face="bold"),
           strip.text.x = element_text(),
           strip.text.y = element_text(angle=-90),
           

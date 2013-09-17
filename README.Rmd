@@ -24,7 +24,7 @@ ggplot(cars, aes(x=speed, y=dist)) + geom_point(pch=1) + theme_bdc_classic()
 ```
 
 
-### `theme_bdc_facets`
+### `theme_bdc_simplefacets`
 
 This theme places data within a boxed panel and is therefore recommended with plots with multiple facets. For the following example, we'll use the `tips` data from the `reshape2` package.
 
@@ -34,20 +34,36 @@ library(reshape2)
 
 Ok, now let's plot the tip as a fraction of the total bill. We'll divide the data between men and women:
 
-```{r facets_theme}
+```{r simplefacets_theme}
 ggplot(tips, aes(x=total_bill, y=tip/total_bill)) +
   geom_point(pch=1) +
   facet_grid(. ~ sex) +
-  theme_bdc_facets()
+  theme_bdc_simplefacets()
 ```
 
 Are men better tippers than Women on Thursdays?
 
-```{r facets_theme_2}
+```{r simplefacets_theme_2}
 ggplot(tips, aes(x=total_bill, y=tip/total_bill, color=sex)) +
   geom_point(pch=1) +
   facet_grid(. ~ day) +
-  theme_bdc_facets()
+  theme_bdc_simplefacets()
+```
+
+### `theme_bdc_greyfacets`
+
+```{r greyfacets_theme}
+ggplot(tips, aes(x=total_bill, y=tip/total_bill)) +
+  geom_point(pch=1) +
+  facet_grid(. ~ sex) +
+  theme_bdc_greyfacets()
+```
+
+```{r greyfacets_theme_2}
+ggplot(tips, aes(x=total_bill, y=tip/total_bill, color=sex)) +
+  geom_point(pch=1) +
+  facet_grid(. ~ day) +
+  theme_bdc_greyfacets()
 ```
 
 Scripts
