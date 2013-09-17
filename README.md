@@ -19,8 +19,8 @@ This theme creates "classic" looking plots with basic black axis lines. While it
 
 
 ```r
-ggplot(cars, aes(x = speed, y = dist)) + geom_point() + xlab("Speed") + ylab("Distance") + 
-    theme_bdc_classic()
+ggplot(cars, aes(x = speed, y = dist)) + geom_point(pch = 1) + xlab("Speed") + 
+    ylab("Distance") + theme_bdc_classic()
 ```
 
 ![plot of chunk classic_theme](figure/classic_theme.png) 
@@ -41,8 +41,8 @@ Ok, now let's plot the tip as a fraction of the total bill. We'll divide the dat
 
 
 ```r
-ggplot(tips, aes(x = total_bill, y = tip/total_bill)) + geom_point() + facet_grid(. ~ 
-    sex) + xlab("Total Bill") + ylab("Tip (Percentage of Total Bill)") + coord_equal(ratio = 60) + 
+ggplot(tips, aes(x = total_bill, y = tip/total_bill)) + geom_point(pch = 1) + 
+    facet_grid(. ~ sex) + xlab("Total Bill") + ylab("Tip (Percentage of Total Bill)") + 
     theme_bdc_facets()
 ```
 
@@ -53,9 +53,9 @@ Are men better tippers than Women on Thursdays?
 
 
 ```r
-ggplot(tips, aes(x = total_bill, y = tip/total_bill, color = sex)) + geom_point() + 
+ggplot(tips, aes(x = total_bill, y = tip/total_bill, color = sex)) + geom_point(pch = 1) + 
     facet_grid(. ~ day) + xlab("Total Bill") + ylab("Tip (Percentage of Total Bill)") + 
-    coord_equal(ratio = 80) + theme_bdc_facets()
+    theme_bdc_facets()
 ```
 
 ![plot of chunk facets_theme_2](figure/facets_theme_2.png) 
