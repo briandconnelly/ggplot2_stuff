@@ -4,6 +4,8 @@ ggplot2 stuff
 These are some themes, scripts, and other things related to making plots with
 [ggplot2](http://ggplot2.org).
 
+**NOTE**: This package has been replaced by [ggplot2bdc](https://github.com/briandconnelly/ggplot2bdc)
+
 Themes
 ---------------
 
